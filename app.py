@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Auth blueprint will be registered later with /auth prefix
 
-from flask_mysqldb import MySQL
+# Removed flask_mysqldb - now using PyMySQL with SQLAlchemy
 from config import Config
 from datetime import datetime, timedelta
 from models import Product, Customer, Order, Supplier, Report, db, Category, PreOrder, Notification, generate_slug, PreOrderPayment, get_db
@@ -54,7 +54,7 @@ def pregenerate_common_qr_codes():
     app.logger.info(f"Pre-generated {len(common_amounts)} common QR codes")
 
 # Initialize extensions without circular imports
-mysql = MySQL()
+# mysql = MySQL()  # Removed - now using SQLAlchemy with PyMySQL
 
 def create_app():
     app = Flask(__name__, static_folder='static')
