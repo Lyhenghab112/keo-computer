@@ -5,7 +5,7 @@ mysql-connector-python==8.1.0
 python-dotenv==1.0.0
 flask_sqlalchemy==3.0.5
 qrcode[pil]==7.4.2
-bakong-khqr==1.0.0
+bakong-khqr==0.4.15
 pyotp==2.9.0
 flask-mail==0.9.1
 pytesseract==0.3.10
@@ -13,3 +13,5 @@ Pillow==10.0.1
 pdf2image==1.16.3
 pyzbar==0.1.9
 gunicorn==21.2.0
+opencv-python==4.8.1.78
+numpy<2
