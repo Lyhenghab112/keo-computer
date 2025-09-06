@@ -9,7 +9,7 @@ class Config:
     MYSQL_HOST = os.getenv('MYSQL_HOST') or 'localhost'
     MYSQL_USER = os.getenv('MYSQL_USER') or 'root'
     MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD') or '12345'
-    MYSQL_DB = os.getenv('MYSQL_DB') or 'railway'
+    MYSQL_DB = os.getenv('MYSQL_DB') or os.getenv('MYSQL_DATABASE') or 'computershop5'
     SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}/{MYSQL_DB}"
 
     # File upload configuration
